@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Daily Report Log</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">DailyLog<br>
+        <strong>Amazon</strong></div>
+        <div class="right">
+            <a href="index.html">New Log</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="">User</a>
+        </div>
+    </div>
+    <div class="header2">
+        <h1>Daily Problems Report Log</h1>
+        <div class="h1">
+            <p>This daily log page is for Amazon associates to report the problems you encounter that caused you to 
+        slow down or unable to meet your work rate</p>
+        </div>
+        <div class="h2">
+            <p>This DailyLog is intent for work relate problems only, if you have any personal issues need to be discussed,
+        please contact your AM, HR or MyVoice </p>
+        </div>
+    
+    </div>
+    
+    <div id="main">
+        
+        
+        <form id="new-report">
+            <div class="wrapper">
+                   <section>Enter date to report:</section> 
+            <input type="date" id="date" name="date"> 
+        </div>
+        <div class="shift">
+            <section>Select Your Shift:</section>
+                <select id="shift">
+                    <option value="" disabled selected class="disable">Choose your shift</option>
+                    <option value="Day">Days</option>
+                    <option value="Night">Nights</option>
+                </select>
+        </div>
+        <div class="period">
+            <section>What period the problems occured:</section>
+                <select name="" id="period">
+                    <option value="" disabled selected class="disable" style="color:lightgrey">Select the period</option>
+                    <option value="1">1st</option>
+                    <option value="2">2nd</option>
+                    <option value="3">3rd</option>
+                </select>
+        </div>
+        <div class="duty">
+            <section>Your duty:</section>
+            <select name="" id="duty">
+                <option value="" disabled selected class="disable">What were you assigned?</option>
+                <option value="Induct">Induct</option>
+                <option value="Rebin">Rebin</option>
+                <option value="Pack">Pack</option>
+                <option value="Pick">Pick</option>
+                <option value="Stow">Stow</option>
+            </select>
+        </div>
+        <div class="Comment">
+            <section>Report the problems:</section>
+                <div class="specific">
+                    Be specific but simple.<br>
+                    For example:<br>
+                 1) Convey broke down<br>
+                 2) Rebin A or B left the station..<br>
+                </div> 
+                   <textarea name="report" id="text" cols="30" rows="10"></textarea><br>
+        </div>
+        <!-- <button onclick="refresh()">Add Report</button> -->
+        <button>Add Report</button>
+         <!-- <button onclick="sort()">Add Report</button> -->
+        </form>
+        <hr>
+        
+        
+    </div>
+
+    <div id="search">
+        <div >
+            Date/Duty search:
+            <input id="search-text" type="text" placeholder="Filter by Date or Duty">
+        </div>
+        <hr>
+        <!-- <div >
+            Duty search:
+            <input id="search-text2" type="text" placeholder="Filter by Duty">
+        </div>
+        <hr> -->
+    </div>
+    <div id="log"></div>
+    <script src="js/uuidv4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"></script>
+    <script src="js/report-functions.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

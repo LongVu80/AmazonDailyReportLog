@@ -1,0 +1,109 @@
+body {
+    width: 400px;
+    margin: auto;
+    background-color: lightgrey;
+    border: 1px outset;
+}
+
+.header {
+    background-color: rgb(13, 13, 41);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+/* .change{
+    font-size: 20px;
+} */
+.header2 {
+    padding: 10px;
+}
+
+.left {
+    margin-left: 10px;
+}
+.right {
+   margin-right: 10px;
+}
+
+.right a{
+    text-decoration: none;
+    color: white;
+}
+
+.h1 {
+    color: darkslategray;
+}
+
+.h2 {
+    color: darkgrey;
+    font-style: italic;
+}
+#main{
+    width: 350px;
+    background-color:rgb(255, 254, 254);
+    border: 1px outset;
+    padding: 15px;
+    margin: auto;
+}
+
+#main2 {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color:rgb(255, 254, 254);
+    border: 1px outset;
+    padding: 15px;
+    margin: auto;
+}
+
+#shift, #period, #duty {
+    width: 200px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+.disable {
+    color: darkgray;
+}
+
+.specific {
+    color: darkgrey;
+    font-style: italic;
+}
+
+#result {
+    width: 350px;
+    background-color:rgb(255, 254, 254);
+    border: 1px outset;
+    padding: 15px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#search{
+    width: 350px;
+    background-color:rgb(255, 254, 254);
+    border: 1px outset;
+    padding: 15px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+
+#log {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#about{
+    text-align: center;
+}
