@@ -8,7 +8,7 @@ const getSavedReports = function () {
 }
 
 const saveReports = function (reports) {
-    localStorage.setItem('reports', JSON.stringify(reports))
+    localStorage.setItem('reportLogs', JSON.stringify(reports))
 }
 
 const removeReport = function (id) {
