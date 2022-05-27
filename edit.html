@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div class="left">DailyLog<br>
         <strong>Amazon</strong></div>
         <div class="right">
             <a href="index.html">New Log</a>
-            <a href="dashboard.html">Dashboard</a>
+            <a href="index.html#search">Dashboard</a>
             <a href="">User</a>
         </div>
     </div>
@@ -29,15 +29,49 @@
                  1) Convey broke down<br>
                  2) Rebin A or B left the station..<br>
                 </div> 
+                <div class="wrapper">
+                    <section>Enter date to report:</section> 
+             <input type="date" id="date" name="date"> 
+         </div>
+         <div class="shift">
+             <section>Select Your Shift:</section>
+                 <select id="shift">
+                     <option value="" disabled selected class="disable">Choose your shift</option>
+                     <option value="Day">Days</option>
+                     <option value="Night">Nights</option>
+                 </select>
+         </div>
+         <div class="period">
+             <section>What period the problems occured:</section>
+                 <select name="" id="period">
+                     <option value="" disabled selected class="disable" style="color:lightgrey">Select the period</option>
+                     <option value="1">1st</option>
+                     <option value="2">2nd</option>
+                     <option value="3">3rd</option>
+                 </select>
+         </div>
+         <div class="duty">
+             <section>Your duty:</section>
+             <select name="" id="duty">
+                 <option value="" disabled selected class="disable">What were you assigned?</option>
+                 <option value="Induct">Induct</option>
+                 <option value="Rebin">Rebin</option>
+                 <option value="Pack">Pack</option>
+                 <option value="Pick">Pick</option>
+                 <option value="Stow">Stow</option>
+             </select>
+         </div>
                    <textarea name="report" id="text" cols="30" rows="10"></textarea>
         </div>
         <br>
-        <a href="index.html"><button>Save</button></a>
+        <!-- <a href="index.html"><button>Save</button></a> -->
+        <button onclick="location.href='index.html#search'" style="width: 75px;">Save</button>
     </div>
     <div id="about">
         Created by Long Vu on May 16, 2022<br>
         Copyright © All Rights Reversed
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"></script>
     <script src="js/report-functions.js"></script>
     <script src="js/edit.js"></script>
 </body>

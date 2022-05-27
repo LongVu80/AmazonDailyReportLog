@@ -6,7 +6,6 @@ const filters = {
 }
 
 renderReports(reports, filters)
-// dasboardReport(reports)
 
 document.querySelector('#new-report').addEventListener('submit', function (e) {
     
@@ -25,9 +24,7 @@ document.querySelector('#new-report').addEventListener('submit', function (e) {
     })
     saveReports(reports)
     location.assign(`./edit.html#${id}`)
-    
 })
-
 document.querySelector('#search-text').addEventListener('input', function (e) {
     filters.searchText = e.target.value
     renderReports(reports, filters)
@@ -38,11 +35,11 @@ const refresh = function(){
         location.reload()}, 1000)
 }
 
-// const sort = function(){
-//     reports.Time.sort(function(a, b){
-//         if(a > b){return -1}
-//         if(a < b){return 1}
-//         return 0
-//     })
-//     renderReports(reports, filters)
-// }
+const sort = function(){
+    reports.sort(function(a, b){
+        if(a.Date > b.Date){return -1}
+        if(a.Date < b.Date){return 1}
+        return 0
+    })
+    renderReports(reports, filters)
+}
