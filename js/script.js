@@ -2,7 +2,8 @@ const reports = getSavedReports();
 
 
 const filters = {
-    searchText: ''
+    searchText: '',
+    sortBy: 'byNewest'
 }
 
 renderReports(reports, filters)
@@ -11,6 +12,7 @@ document.querySelector('#new-report').addEventListener('submit', function (e) {
     
     const id = uuidv4()
     const timestamp = moment().valueOf()
+    console.log(timestamp)
     const d = moment().format('MMMM Do YYYY, h:mm:ss a')
     reports.push({
         id:  id,
@@ -30,16 +32,12 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
     renderReports(reports, filters)
 })
 
-const refresh = function(){
-    setTimeout(function(){
-        location.reload()}, 1000)
-}
-
-const sort = function(){
-    reports.sort(function(a, b){
-        if(a.Date > b.Date){return -1}
-        if(a.Date < b.Date){return 1}
-        return 0
-    })
+document.querySelector('#filter-by').addEventListener('change', function (e) {
+    filters.sortBy = e.target.value
     renderReports(reports, filters)
-}
+})
+
+// document.querySelector('#removeOldLog').addEventListener('change', function (e) {
+//     filters.sortBy = e.target.value
+//     renderReports(reports, filters)
+// })

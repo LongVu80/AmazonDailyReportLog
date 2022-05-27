@@ -53,34 +53,8 @@ const generateReportDOM = function (report) {
     return reportEl
 }
 
-// const sortReports = function (reports, sortBy) {
-//     if (sortBy === 'newestLog') {
-//         return reports.sort(function (a, b) {
-//             if (a.createdAt > b.createdAt) {
-//                 return -1
-//             } else if (a.createdAt < b.createdAt) {
-//                 return 1
-//             } else {
-//                 return 0
-//             }
-//         })
-//     } else if (sortBy === 'latestLog') {
-//         return reports.sort(function (a, b) {
-//             if (a.createdAt < b.createdAt) {
-//                 return -1
-//             } else if (a.createdAt < b.createdAt) {
-//                 return 1
-//             } else {
-//                 return 0
-//             }
-//         })
-//     } else {
-//         return reports
-//     }
-// }
-
 const renderReports = function(reports, filters){
-    // reports = sortReports(reports, filters.sortBy)
+    reports = sortReports(reports, filters.sortBy)
     const filterReports = reports.filter(function(report){
         return report.Date.toLowerCase().includes(filters.searchText.toLowerCase()) ||
         report.Duty.toLowerCase().includes(filters.searchText.toLowerCase())
@@ -94,14 +68,29 @@ const renderReports = function(reports, filters){
     })
 }
 
-// const sort = function(){
-//     reports.Time.sort(function(a, b){
-//         if(a.createdAt < b.createdAt){return -1}
-//         if(a.createdAt > b.createdAt){return 1}
-//         return 0
-//     })
-//     renderReports(reports, filters)
-// }
+const refresh = function(){
+    setTimeout(function(){
+        location.reload()}, 1000)
+}
+
+const sortReports = function (reports, sortBy) {
+    if (sortBy === 'byNewest') {
+        return reports.sort(function(a, b){
+            if(a.Date < b.Date){return -1}
+            if(a.Date > b.Date){return 1}
+            return 0
+        })
+    } else 
+    if (sortBy === 'byOldest') {
+        return reports.sort(function(a, b){
+            if(a.Date > b.Date){return -1}
+            if(a.Date < b.Date){return 1}
+            return 0
+        })
+    }  else {
+        return reports
+    }
+}
 
 // const removeOldLog = function(id){
 //     var hours = 1; 
@@ -109,14 +98,12 @@ const renderReports = function(reports, filters){
 //     // let created = reports.createdAt
 //     reports.forEach(function(report){
 //         if(now - report.createdAt > hours*30000) {
-//             if(report.id > -1){
-//                 reports.splice(report.id, 2)
+//             // if(report.id > -1){
+//                 reports.splice(report.id, 20)
 //             }
-//         }
+//         // }
 //     })
 //     saveReports(reports)
 //     renderReports(reports, filters)
 // }
-
-
 
