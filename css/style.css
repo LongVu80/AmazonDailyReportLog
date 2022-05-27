@@ -5,7 +5,7 @@ body {
     border: 1px outset;
 }
 
-.header {
+#header {
     background-color: rgb(13, 13, 41);
     color: white;
     display: flex;
@@ -106,4 +106,8 @@ a{
 
 #about{
     text-align: center;
+}
+
+.top {
+    color: blue;
 }

@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div class="left">DailyLog<br>
         <strong>Amazon</strong></div>
         <div class="right">
-            <a href="index.html">New Log</a>
             <a href="#search">Dashboard</a>
             <a href="">User</a>
         </div>
@@ -76,9 +75,8 @@
                 </div> 
                    <textarea name="report" id="text" cols="30" rows="10"></textarea><br>
         </div>
-        <!-- <button onclick="refresh()">Add Report</button> -->
-        <button href="#search">Add Report</button>
-         <!-- <button onclick="sort()">Add Report</button> -->
+        <button onclick="location.href='#search'">Add Report</button>
+        
         </form>
         <hr>
         
@@ -91,7 +89,9 @@
             <input id="search-text" type="text" placeholder="Filter by Date or Duty">
         </div>
         <hr>
+        <a href="#header" class="top">back to top</a>
     </div>
+    
         <div id="log"></div>
     
     <div id="about">

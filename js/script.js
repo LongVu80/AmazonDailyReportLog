@@ -25,6 +25,7 @@ document.querySelector('#new-report').addEventListener('submit', function (e) {
     })
     saveReports(reports)
     location.assign(`./edit.html#${id}`)
+    
 })
 
 document.querySelector('#search-text').addEventListener('input', function (e) {
