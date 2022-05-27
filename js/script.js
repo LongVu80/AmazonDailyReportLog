@@ -6,6 +6,7 @@ const filters = {
 }
 
 renderReports(reports, filters)
+// dasboardReport(reports)
 
 document.querySelector('#new-report').addEventListener('submit', function (e) {
     

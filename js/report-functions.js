@@ -65,5 +65,7 @@ const renderReports = function(reports, filters){
         const reportEl = generateReportDOM(report)
         document.querySelector('#log').appendChild(reportEl)
     })
-    
 }
+
+
+
